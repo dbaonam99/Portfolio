@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react"; 
+import { useContext, useRef, useState } from "react"; 
 import Home from "./Home"; 
 import '../App.css'
 import { HoverContext } from "../Contexts/Hover"; 
@@ -10,8 +10,7 @@ import {
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import { LoadingContext } from "../Contexts/Loading";
-import LoadingChildOut from "../components/Layouts/LoadingChildOut";
-import Follow from "../components/Layouts/Follow";
+import LoadingChildOut from "../components/Layouts/LoadingChildOut"; 
 import Header from "../components/Layouts/Header";
 import classNames from 'classnames'
 
@@ -29,16 +28,7 @@ export default function Container() {
 
     const { 
         tabChange
-    } = useContext(LoadingContext)    
-
-    useEffect(()=>{
-        window.scrollTo(0,0);  
-            if (window.location.href.split("/")[3] === "home") { 
-                setShowFl(true) 
-            } else {
-                setShowFl(false)
-            }
-    }, [window.location.href])
+    } = useContext(LoadingContext)     
 
     return (
         <Router>
@@ -72,10 +62,7 @@ export default function Container() {
 
                     { tabChange &&
                         <LoadingChildOut/>
-                    }
-                    { showFl &&
-                        <Follow/>
-                    }
+                    } 
                     <Header/>
                     <Route path="/" exact component={Home}></Route>
                     <Route path="/home" exact component={Home}></Route>

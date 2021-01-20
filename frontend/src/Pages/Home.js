@@ -5,6 +5,7 @@ import LoadingChild from '../components/Layouts/LoadingChild';
 import { useEffect, useRef, useState } from 'react' 
 import Div100vh from 'react-div-100vh';  
 import Typist from 'react-typist';
+import Follow from '../components/Layouts/Follow';
 
 function Home(props) {   
 
@@ -27,12 +28,13 @@ function Home(props) {
             className="Home"
             ref={home}
         >    
+            <Follow/> 
             <LoadingChild
                 loadingChild={loadingChild}
             />
             <BackgroundLine/> 
             <div className="home-container flex">
-                <div className="home-avt" style={{backgroundImage: 'url(https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.15752-9/139862374_2922850601371792_6711855358401197181_n.jpg?_nc_cat=104&ccb=2&_nc_sid=ae9488&_nc_ohc=aq14HCKSn5YAX_GTd6a&_nc_ht=scontent.fsgn3-1.fna&oh=fc7494ce8ac68b2e5712734a02ea8ce3&oe=602BF504)'}}/>
+                <div className="home-avt" style={{backgroundImage: 'url(https://cvio.bslthemes.com/ve1/wp-content/uploads/2020/01/man-800x720.jpg)'}}/>
                 <div className="home-hello flex">
                     <p>Hello, I’m <strong>Duong Bao Nam</strong>, a third year student at the University of Information Technology.</p>
                 </div>

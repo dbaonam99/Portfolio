@@ -5,7 +5,7 @@ import LoadingPage from './components/Layouts/LoadingPage';
 import { HoverProvider } from './Contexts/Hover'; 
 import Container from './Pages/Container'; 
 
-function App() { 
+function App() {  
     
     useEffect(()=>{ 
         document.body.style = 'background: #101010;';
