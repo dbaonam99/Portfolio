@@ -4,9 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-/backend/node_modules
-/fontend/node_modules
-/backend/.env
+backend/node_modules
+fontend/node_modules
+backend/.env
+
 # testing
 /coverage
 
