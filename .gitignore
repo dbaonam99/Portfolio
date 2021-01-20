@@ -7,7 +7,7 @@
 backend/node_modules
 fontend/node_modules
 backend/.env
-
+frontend/.eslintcache
 # testing
 /coverage
 
