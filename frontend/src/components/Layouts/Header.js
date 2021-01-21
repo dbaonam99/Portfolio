@@ -28,8 +28,7 @@ function Header(props) {
             props.history.push(`/${url}`) 
             setTabChangeFunc(false)
         }, 2000)
-    }
-    console.log(location)
+    } 
 
     return (
         <div className="menu"> 

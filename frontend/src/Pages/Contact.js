@@ -15,6 +15,7 @@ function Contact(props) {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false)
     
     useEffect(()=>{ 
         window.scrollTo(0, 0) 
@@ -26,13 +27,15 @@ function Contact(props) {
     }, []) 
 
     const onSubmit = (event) => {
-        event.preventDefault();
-        axios.post('http://localhost:5000/email', {  
+        event.preventDefault(); 
+        setLoading(true)
+        axios.post('https://baonam-port.glitch.me/email', {  
             name: name,
             email: email,
             subject: subject,
             message: message
         }).then((res)=>{
+            setLoading(false)
             alert("Thank you for your contact!");
             setName("")
             setEmail("")
@@ -79,6 +82,7 @@ function Contact(props) {
                                 setName(event.target.value)
                             }}
                             value={name}
+                            required
                         ></input>
                         <input 
                             placeholder="Email" className="input"
@@ -86,6 +90,7 @@ function Contact(props) {
                                 setEmail(event.target.value)
                             }}
                             value={email}
+                            required
                         ></input>
                         <input 
                             placeholder="Subject" className="input"
@@ -93,6 +98,7 @@ function Contact(props) {
                                 setSubject(event.target.value)
                             }}
                             value={subject}
+                            required
                         ></input>
                         <textarea 
                             placeholder="Message" className="textarea"
@@ -100,8 +106,16 @@ function Contact(props) {
                                 setMessage(event.target.value)
                             }}
                             value={message}
+                            required
                         ></textarea>
-                        <button>Send message</button>
+                        <button>
+                            { !loading &&
+                                <p>Send message</p>
+                            }
+                            { loading &&
+                                <p>Sending...</p>
+                            }
+                        </button>
                     </form>
                 </div> 
             </div> 
