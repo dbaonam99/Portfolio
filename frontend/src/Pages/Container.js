@@ -16,8 +16,7 @@ import classNames from 'classnames'
 
 export default function Container() {  
 
-    const cursor = useRef()
-    const [showFl, setShowFl] = useState(true)
+    const cursor = useRef() 
 
     const {
         loading

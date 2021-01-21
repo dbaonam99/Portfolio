@@ -53,7 +53,7 @@ export default function Project(props) {
                         onClick={()=>{
                             setOpenProject(false)
                             document.body.style.overflow = "unset"
-                            console.log("vheck")
+                            setHoverFunc(false)
                         }}
                     >
                         <FontAwesomeIcon icon={faTimes} className="icon"/>
@@ -90,8 +90,12 @@ export default function Project(props) {
                             Resources
                         </div>
                         <ul className="project-info-row-text">
-                            <li>The project is online at <a href="https://www.facebook.com/dbaonam99" rel="noopener noreferrer" target="_blank">xvideos</a></li>
-                            <li>Access the project's source on <a href="https://www.facebook.com/dbaonam99" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+                            { project.projectLink !== null &&
+                                <li>The project is online at <a href={project.projectLink} rel="noopener noreferrer" target="_blank">{project.projectLink}</a></li>
+                            }
+                            { project.projectGithub !== null &&
+                                <li>Access the project's source on <a href={project.projectGithub} rel="noopener noreferrer" target="_blank">GitHub</a></li>
+                            } 
                         </ul>
                     </div>
                     <Slider {...settings}> 

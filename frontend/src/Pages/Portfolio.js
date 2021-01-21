@@ -8,7 +8,7 @@ import BackgroundLine from '../components/Layouts/BackgroundLine'
 import LoadingChild from '../components/Layouts/LoadingChild'
 import Project from '../components/Project/Project'
 
-function Portfolio(props) { 
+function Portfolio() { 
   
     const { 
         setHoverFunc
@@ -58,7 +58,7 @@ function Portfolio(props) {
                 "News"
             ],
             projectGithub: "https://github.com/dbaonam99/OnlineShoppingWebsite",
-            projectLink: "",
+            projectLink: "http://pe.heromc.net:3001",
         },
         {
             projectName: "Faculty of Law - UEL's blog",
@@ -88,7 +88,7 @@ function Portfolio(props) {
                 "News"
             ],
             projectGithub: null,
-            projectLink: "",
+            projectLink: "http://pe.heromc.net:3003",
         },
         {
             projectName: "Pet Accessories Store",
@@ -119,7 +119,7 @@ function Portfolio(props) {
                 "News"
             ],
             projectGithub: "https://github.com/dbaonam99/PetShopProject",
-            projectLink: "",
+            projectLink: "http://pe.heromc.net:3002",
         },
         {
             projectName: "Love memory",
@@ -142,7 +142,7 @@ function Portfolio(props) {
                 "OWL"
             ],
             projectGithub: "https://github.com/dbaonam99/themefores-ilove",
-            projectLink: "",
+            projectLink: "https://dbaonam99.github.io/themefores-ilove/",
         },
         {
             projectName: "Coffee Management System",
@@ -160,7 +160,7 @@ function Portfolio(props) {
                 "Database management"
             ],
             projectGithub: "https://github.com/dbaonam99/CoffeeManagementSystem",
-            projectLink: "",
+            projectLink: null,
         },
         {
             projectName: "My Portfolio",
@@ -178,8 +178,8 @@ function Portfolio(props) {
                 "Animation on changing pages",
                 "Change mouse cusor"
             ],
-            projectGithub: "https://github.com/dbaonam99/CoffeeManagementSystem",
-            projectLink: "",
+            projectGithub: "https://github.com/dbaonam99/Portfolio",
+            projectLink: "http://pe.heromc.net:3000",
         },
     ]
 
